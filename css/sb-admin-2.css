@@ -47,6 +47,14 @@
   box-sizing: border-box;
 }
 
+.fs-1 { font-size: 2.5rem; }
+.fs-2 { font-size: 2rem; }
+.fs-3 { font-size: 1.75rem; }
+.fs-4 { font-size: 1.5rem; }
+.fs-5 { font-size: 1.25rem; }
+.fs-6 { font-size: 1rem; }
+
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -7579,6 +7587,10 @@ button.bg-dark:focus {
 
 .shadow-none {
   box-shadow: none !important;
+}
+
+.hover{
+  
 }
 
 .w-25 {

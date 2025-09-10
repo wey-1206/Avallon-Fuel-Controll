@@ -54,3 +54,18 @@
   });
 
 })(jQuery); // End of use strict
+
+
+
+
+$(document).ready(function () {
+    // Quando abrir o collapse
+    $('#teste_de_rodagem_collapse').on('show.bs.collapse', function () {
+        $('#indicadores_row').hide();
+    });
+
+    // Quando fechar o collapse
+    $('#teste_de_rodagem_collapse').on('hide.bs.collapse', function () {
+        $('#indicadores_row').show();
+    });
+});
