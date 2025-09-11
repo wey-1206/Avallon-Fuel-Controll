@@ -2981,12 +2981,14 @@ input[type="button"].btn-block {
 .collapse:not(.show) {
   display: none;
 }
-
+#indicadores_row{
+  transition: 1s;
+}
 .collapsing {
   position: relative;
   height: 0;
   overflow: hidden;
-  transition: height 0.15s ease;
+  transition: height 0.85s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -4849,13 +4851,13 @@ input[type="button"].btn-block {
 
 .badge {
   display: inline-block;
-  padding: 0.25em 0.4em;
-  font-size: 75%;
+  /* padding: 0.25em 0.4em; */
+  font-size: 50%;
   font-weight: 700;
-  line-height: 1;
+  line-height: auto;
   text-align: center;
   white-space: nowrap;
-  vertical-align: baseline;
+  vertical-align:middle;
   border-radius: 0.35rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -11302,4 +11304,35 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(20px);
 -webkit-backdrop-filter: blur(20px);
 border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.plus {
+  width: 3%;
+  height: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; 
+}
+
+
+
+table.dataTable thead .sorting::after,
+table.dataTable thead .sorting_asc::after,
+table.dataTable thead .sorting_desc::after {
+    font-family: 'Font Awesome 5 Free'; /* ou 'Bootstrap Icons' */
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+    opacity: 0.5;
+}
+
+table.dataTable thead .sorting::after {
+    content: "\f0dc"; /* triângulo neutro */
+}
+table.dataTable thead .sorting_asc::after {
+    content: "\f0de"; /* triângulo ascendente */
+}
+table.dataTable thead .sorting_desc::after {
+    content: "\f0dd"; /* triângulo descendente */
 }

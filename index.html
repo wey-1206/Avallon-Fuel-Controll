@@ -78,8 +78,6 @@
 
 
 
-
-
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
@@ -163,24 +161,19 @@
 
                     <!-- Content Row -->
                     <div class="row">
-
-                        <!-- Teste de Rodagem Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4" data-toggle="collapse"
-                            data-target="#teste_de_rodagem_collapse" role="button" aria-expanded="false"
-                            aria-controls="teste_de_rodagem_collapse">
-
+                        <!-- Teste de Rodagem Card -->
+                        <div class="col-xl-3 col-md-6 mb-4 card-collapse-toggle" data-toggle="collapse" data-target="#shared_collapse"
+                            role="button" aria-expanded="false" aria-controls="shared_collapse"
+                            data-section="teste_de_rodagem">
                             <div class="card border-left-primary shadow h-100 py-2 hover" id="card_teste_rodagem">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-
                                             <div
                                                 class="text-xs font-weight-bold text-primary text-uppercase mb-1 d-flex align-items-center">
-                                                <i class="bi bi-car-front fs-5 mr-2 "></i>
+                                                <i class="bi bi-car-front fs-5 mr-2"></i>
                                                 <strong>TESTE DE RODAGEM</strong>
                                             </div>
-
-
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
                                         </div>
                                         <div class="col-auto">
@@ -191,66 +184,64 @@
                             </div>
                         </div>
 
-                        <!-- Assistencia Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2 hover" id="card_ssistencia">
+                        <!-- Assistência Card -->
+                        <div class="col-xl-3 col-md-6 mb-4 card-collapse-toggle" data-toggle="collapse" data-target="#shared_collapse"
+                            role="button" aria-expanded="false" aria-controls="shared_collapse"
+                            data-section="assistencia">
+                            <div class="card border-left-success shadow h-100 py-2 hover" id="card_assistencia">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div
                                                 class="text-xs font-weight-bold text-success text-uppercase mb-1 d-flex align-items-center">
-                                                <i class="bi bi-wrench fs-5 mr-2 "></i>
+                                                <i class="bi bi-wrench fs-5 mr-2"></i>
                                                 <strong>ASSISTÊNCIA</strong>
                                             </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="bi bi-fuel-pump-fill fa-2x text-gray-300"></i>
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-
-
-                        <!--Checklist de Entrada Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <!-- Checklist de Entrada Card -->
+                        <div class="col-xl-3 col-md-6 mb-4 card-collapse-toggle" data-toggle="collapse" data-target="#shared_collapse"
+                            role="button" aria-expanded="false" aria-controls="shared_collapse"
+                            data-section="checklist">
                             <div class="card border-left-warning shadow h-100 py-2 hover" id="card_checklist">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div
                                                 class="text-xs font-weight-bold text-warning text-uppercase mb-1 d-flex align-items-center">
-                                                <i class="bi bi-clipboard2-check-fill fs-5 mr-2 "></i>
-                                                <strong>Checklist de Entrada</strong>
+                                                <i class="bi bi-clipboard2-check-fill fs-5 mr-2"></i>
+                                                <strong>CHECKLIST DE ENTRADA</strong>
                                             </div>
-
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="bi bi-fuel-pump-fill fa-2x text-gray-300"></i>
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <!-- Consumo Card -->
+                        <div class="col-xl-3 col-md-6 mb-4 card-collapse-toggle" data-toggle="collapse" data-target="#shared_collapse"
+                            role="button" aria-expanded="false" aria-controls="shared_collapse" data-section="consumo">
                             <div class="card border-left-info shadow h-100 py-2 hover" id="card_consumo_atual">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div
                                                 class="text-xs font-weight-bold text-info text-uppercase mb-1 d-flex align-items-center">
-                                                <i class="bi bi-speedometer fs-5 mr-2 "></i>
+                                                <i class="bi bi-speedometer fs-5 mr-2"></i>
                                                 <strong>CONSUMO</strong>
                                             </div>
-
-
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
                                                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
@@ -272,26 +263,29 @@
                             </div>
                         </div>
 
-
-                        <div class="collapse mt-2 col-xl-12 col-md-12 mb-4" id="teste_de_rodagem_collapse">
-                            <div class="card card-body shadow">
+                        <!-- Único Collapse -->
+                        <div class="collapse mt-2 col-xl-12 col-md-12 mb-4" id="shared_collapse">
+                            <div class="card card-body shadow" id="collapse_card">
                                 <div class="container-fluid">
-
-                                    <!-- Page Heading -->
-                                    <h1 class="h3 mb-2 text-gray-800">Teste de Rodagem</h1>
-                                    <p class="mb-4">Historico de Notas e Canhotos fornecidos pelo setor Teste de Rodagem
-                                    </p>
-
-                                    <!-- DataTales Example -->
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h1 class="h3 mb-2 text-gray-800" id="collapse_title">
+                                            <i class="fs-2 mr-2" id="collapse_icon"></i> <span
+                                                id="collapse_title_text"></span>
+                                        </h1>
+                                        <button class="btn plus" id="novo_registro">
+                                            <i class="bi bi-plus fs-4"></i>
+                                        </button>
+                                    </div>
+                                    <p class="mb-4" id="collapse_description"></p>
                                     <div class="card shadow mb-4">
                                         <div class="card-header py-3">
-                                            <h6 class="m-0 font-weight-bold text-primary">Teste de Rodagem</h6>
+                                            <h6 class="m-0 font-weight-bold" id="collapse_table_title"></h6>
                                         </div>
                                         <div class="card-body">
                                             <div class="table-responsive">
                                                 <table class="table table-bordered" id="dataTable" width="100%"
                                                     cellspacing="0">
-                                                    <thead>
+                                                    <thead class="">
                                                         <tr>
                                                             <th>Canhoto</th>
                                                             <th>Data</th>
@@ -303,135 +297,17 @@
                                                             <th>Obs.</th>
                                                         </tr>
                                                     </thead>
-                                                    <tfoot>
-                                                        <tr>
-                                                            <th>Canhoto</th>
-                                                            <th>Data</th>
-                                                            <th>Placa/OS</th>
-                                                            <th>Tipo</th>
-                                                            <th>Valor</th>
-                                                            <th>Motorista</th>
-                                                            <th>NF</th>
-                                                            <th>Obs.</th>
-                                                        </tr>
-                                                    </tfoot>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>3001</td>
-                                                            <td>02/08/2025</td>
-                                                            <td>ABC-1234</td>
-                                                            <td>Gasolina</td>
-                                                            <td>100</td>
-                                                            <td>Thiago</td>
-                                                            <td><span class="badge badge-success">ENTREGUE</span></td>
-                                                            <td>Abastecimento rápido</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3002</td>
-                                                            <td>04/08/2025</td>
-                                                            <td>23456</td>
-                                                            <td>Diesel</td>
-                                                            <td>150</td>
-                                                            <td>Douglas</td>
-                                                            <td><span class="badge badge-danger">PENDENTE</span></td>
-                                                            <td>NF aguardando conferência</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3003</td>
-                                                            <td>05/08/2025</td>
-                                                            <td>DEF-5678</td>
-                                                            <td>Álcool</td>
-                                                            <td>200</td>
-                                                            <td>Leandro</td>
-                                                            <td><span class="badge badge-warning">DIVERGENTE</span></td>
-                                                            <td>Diferença no valor</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3004</td>
-                                                            <td>07/08/2025</td>
-                                                            <td>21234</td>
-                                                            <td>Gasolina</td>
-                                                            <td>30</td>
-                                                            <td>Elizeu</td>
-                                                            <td><span class="badge badge-success">ENTREGUE</span></td>
-                                                            <td>Conferido no ato</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3005</td>
-                                                            <td>09/08/2025</td>
-                                                            <td>GHI-9012</td>
-                                                            <td>Gasolina</td>
-                                                            <td>50</td>
-                                                            <td>Thiago</td>
-                                                            <td><span class="badge badge-danger">PENDENTE</span></td>
-                                                            <td>NF não localizada</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3006</td>
-                                                            <td>12/08/2025</td>
-                                                            <td>27890</td>
-                                                            <td>Gasolina</td>
-                                                            <td>100</td>
-                                                            <td>Douglas</td>
-                                                            <td><span class="badge badge-warning">DIVERGENTE</span></td>
-                                                            <td>Erro no número da NF</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3007</td>
-                                                            <td>15/08/2025</td>
-                                                            <td>JKL-3456</td>
-                                                            <td>Diesel</td>
-                                                            <td>150</td>
-                                                            <td>Leandro</td>
-                                                            <td><span class="badge badge-success">ENTREGUE</span></td>
-                                                            <td>Sem observações</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3008</td>
-                                                            <td>18/08/2025</td>
-                                                            <td>24567</td>
-                                                            <td>Gasolina</td>
-                                                            <td>200</td>
-                                                            <td>Elizeu</td>
-                                                            <td><span class="badge badge-danger">PENDENTE</span></td>
-                                                            <td>Aguardando nota fiscal</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3009</td>
-                                                            <td>22/08/2025</td>
-                                                            <td>MNO-7890</td>
-                                                            <td>Gasolina</td>
-                                                            <td>30</td>
-                                                            <td>Thiago</td>
-                                                            <td><span class="badge badge-warning">DIVERGENTE</span></td>
-                                                            <td>Valor diferente do comprovante</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3010</td>
-                                                            <td>27/08/2025</td>
-                                                            <td>28912</td>
-                                                            <td>Diesel</td>
-                                                            <td>50</td>
-                                                            <td>Douglas</td>
-                                                            <td><span class="badge badge-success">ENTREGUE</span></td>
-                                                            <td>Processo finalizado</td>
-                                                        </tr>
+                                                    <tbody id="collapse_table_body">
+                                                        <!-- Conteúdo da tabela será preenchido dinamicamente -->
                                                     </tbody>
-
-
                                                 </table>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
-
                             </div>
                         </div>
-
-
                     </div>
-
                     <!-- Content Row -->
 
                     <div class="row" id="indicadores_row">
@@ -542,7 +418,7 @@
 
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
@@ -562,6 +438,11 @@
     <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+
+    <script src="js/collapse.js"></script>
+
+
+
 
 </body>
 
