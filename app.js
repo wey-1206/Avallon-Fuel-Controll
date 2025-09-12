@@ -20,6 +20,11 @@ app.use('/setores', setoresRoutes);
 app.use('/fornecedores', fornecedoresRoutes);
 app.use('/combustiveis', combustiveisRoutes);
 
+
+app.get('/', (req, res) => {
+  res.render('index'); // procura views/index.ejs
+});
+
 sequelize.sync().then(() => {
   app.listen(3000, () => console.log('Servidor rodando em http://localhost:3000'));
 });
