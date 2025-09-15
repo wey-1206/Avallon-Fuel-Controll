@@ -1492,7 +1492,7 @@ pre code {
 
 .table {
   width: 100%;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   color: #858796;
 }
 
@@ -9769,6 +9769,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   .table {
     border-collapse: collapse !important;
+
   }
   .table td,
   .table th {

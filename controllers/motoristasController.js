@@ -1,4 +1,4 @@
-const { Motorista } = require('../models');
+const { Motorista, Setor } = require('../models');
 
 const motoristaController = {
     async index(req, res) {
@@ -10,17 +10,33 @@ const motoristaController = {
         }
     },
 
-    async store(req, res) {
-        try {
-            if (!req.body.nome) {
-                return res.status(400).json({ error: 'Nome é obrigatório' });
-            }
-            const novoMotorista = await Motorista.create({ nome: req.body.nome });
-            return res.status(201).json(novoMotorista);
-        } catch (err) {
-            return res.status(500).json({ error: 'Erro ao criar motorista' });
+   async store(req, res) {
+    try {
+        const { nome, setor_id } = req.body;
+
+        if (!nome) {
+            return res.status(400).json({ error: 'Nome é obrigatório' });
         }
-    },
+        if (!setor_id) {
+            return res.status(400).json({ error: 'Setor é obrigatório' });
+        }
+
+        const setor = await Setor.findByPk(setor_id);
+        if (!setor) {
+            return res.status(400).json({ error: 'Setor não encontrado' });
+        }
+
+        const novoMotorista = await Motorista.create({ 
+            nome, 
+            setor_id 
+        });
+
+        return res.status(201).json(novoMotorista);
+    } catch (err) {
+        console.error('Erro ao criar motorista:', err);
+        return res.status(500).json({ error: 'Erro ao criar motorista' });
+    }
+},
 
     async update(req, res) {
         try {

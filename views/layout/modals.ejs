@@ -1,0 +1,307 @@
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="login.html">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fim  logout modal  -->
+
+
+<!-- Modal Motorista -->
+<div class="modal fade" id="motorista_modal" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="motorista_modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Motorista</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="d-flex">
+                <a class="ml-auto mr-4 mt-2 fs-5" data-toggle="collapse" href="#collapseCadastroMotorista" role="button"
+                    aria-expanded="false" aria-controls="collapseCadastroMotorista">
+                    <i class="bi bi-person-plus "></i>
+                </a>
+
+
+            </div>
+            <div class="collapse text-white" id="collapseCadastroMotorista">
+                <div class="card card-body mx-1 bg-dark">
+                    <h5 class="card-title">Cadastrar Novo Motorista</h5>
+
+                    <form class="form-row justify-content-center" id="formMotorista">
+
+                        <div class="col-md-6">
+                            <label for="nome_motorista" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome_motorista" value="" required>
+
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group ">
+                                <label for="setor_id">Setor</label>
+                                <select class="form-control" id="setor_id">
+
+                                </select>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-1  d-flex align-items-center pt-3">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="bi bi-plus-lg"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Setor</th>
+                            <th scope="col">Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela_motorista">
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Fechar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fim Motorista -->
+
+
+<!-- Modal Setor -->
+<div class="modal fade" id="setor_modal" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="setor_modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Setor</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="d-flex">
+                <a class="ml-auto mr-4 mt-2 fs-5" data-toggle="collapse" href="#collapseCadastroSetor" role="button"
+                    aria-expanded="false" aria-controls="collapseCadastroSetor">
+                    <i class="bi bi-plus-lg"></i>
+                </a>
+
+
+            </div>
+            <div class="collapse  text-white" id="collapseCadastroSetor">
+                <div class="card card-body mx-2 bg-dark">
+                    <h5 class="card-title">Cadastrar Novo Setor</h5>
+
+                    <form class="form-row justify-content-center" id="formSetor">
+                        <div class="col-md-11">
+                            <label for="nome_setor" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome_setor" value="" required>
+
+                        </div>
+
+
+
+                        <div class="col-1 p-0 d-flex align-items-end">
+                            <button class="btn btn-primary mt-auto" type="submit">
+                                <i class="bi bi-plus-lg"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela_setor">
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Fechar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fim Setor  -->
+
+<!-- Modal Fornecedor -->
+<div class="modal fade" id="fornecedor_modal" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="setor_modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Fornecedores</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="d-flex">
+                <a class="ml-auto mr-4 mt-2 fs-5" data-toggle="collapse" href="#collapseCadastroFornecedor"
+                    role="button" aria-expanded="false" aria-controls="collapseCadastroFornecedor">
+                    <i class="bi bi-plus-lg"></i>
+                </a>
+
+
+            </div>
+            <div class="collapse  text-white" id="collapseCadastroFornecedor">
+                <div class="card card-body mx-2 bg-dark">
+                    <h5 class="card-title">Cadastrar Novo Fornecedor</h5>
+
+                    <form class="form-row justify-content-center" id="formFornecedor">
+                        <div class="col-md-11">
+                            <label for="nome_fornecedor" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome_fornecedor" value="" required>
+
+                        </div>
+
+
+
+                        <div class="col-1 p-0 d-flex align-items-end">
+                            <button class="btn btn-primary mt-auto" type="submit">
+                                <i class="bi bi-plus-lg"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela_fornecedor">
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Fechar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fim Fornecedor  -->
+
+
+
+<!-- Modal combustivel -->
+<div class="modal fade" id="combustivel_modal" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="combustivel_modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Combustível</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="d-flex">
+                <a class="ml-auto mr-4 mt-2 fs-5" data-toggle="collapse" href="#collapseCadastroCombustivel"
+                    role="button" aria-expanded="false" aria-controls="collapseCadastroCombustivel">
+                    <i class="bi bi-plus-lg"></i>
+                </a>
+
+
+            </div>
+            <div class="collapse  text-white" id="collapseCadastroCombustivel">
+                <div class="card card-body mx-2 bg-dark">
+                    <h5 class="card-title">Cadastrar Novo Combustível</h5>
+
+                    <form class="form-row justify-content-center" id="formCombustivel">
+                        <div class="col-md-11">
+                            <label for="nome_combustivel" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome_combustivel" value="" required>
+
+                        </div>
+
+
+
+                        <div class="col-1 p-0 d-flex align-items-end">
+                            <button class="btn btn-primary mt-auto" type="submit">
+                                <i class="bi bi-plus-lg"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela_combustivel">
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Fechar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fim combustivel  -->

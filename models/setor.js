@@ -11,11 +11,10 @@ const Setor = sequelize.define('Setor', {
     type: DataTypes.STRING,
     allowNull: false
   },
-   is_active: {
+  is_active: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
     defaultValue: true
-    
   }
 }, {
   tableName: 'setor',
@@ -32,9 +31,9 @@ async function initializeSetorData() {
         { nome: 'ASSISTÊNCIA' },
         { nome: 'CHECKLIST DE ENTRADA' }
       ]);
-       console.log('insert OK.');
+      console.log('Setor insert OK.');
     } else {
-      console.log('inserts já feitos');
+      console.log('Setor inserts já feitos');
     }
   } catch (error) {
     console.error('Erro:', error);

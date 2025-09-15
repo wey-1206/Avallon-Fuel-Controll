@@ -6,13 +6,12 @@ const motoristasRoutes = require('./routes/motoristas');
 const combustiveisRoutes = require('./routes/combustiveis');
 const setoresRoutes = require('./routes/setores');
 const fornecedoresRoutes = require('./routes/fornecedores');
-
-
 const app = express();
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/motoristas', motoristasRoutes);

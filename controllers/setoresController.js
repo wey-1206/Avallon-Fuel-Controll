@@ -11,16 +11,20 @@ const setorController = {
     },
 
     async store(req, res) {
-        try {
-            if (!req.body.nome) {
-                return res.status(400).json({ error: 'Nome é obrigatório' });
-            }
-            const novoSetor = await Setor.create({ nome: req.body.nome });
-            return res.status(201).json(novoSetor);
-        } catch (err) {
-            return res.status(500).json({ error: 'Erro ao criar Setor' });
+    try {
+        if (!req.body.nome) {
+            return res.status(400).json({ error: 'Nome é obrigatório' });
         }
-    },
+        const novoSetor = await Setor.create({ nome: req.body.nome });
+        return res.status(201).json(novoSetor);
+    } catch (err) {
+        console.error(err); 
+        return res.status(500).json({ 
+            error: 'Erro ao criar Setor'
+        });
+    }
+}
+,
 
     async update(req, res) {
         try {
