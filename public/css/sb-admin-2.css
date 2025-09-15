@@ -11337,3 +11337,8 @@ table.dataTable thead .sorting_asc::after {
 table.dataTable thead .sorting_desc::after {
     content: "\f0dd"; /* triângulo descendente */
 }
+input,
+select,
+textarea {
+    text-transform: uppercase;
+}

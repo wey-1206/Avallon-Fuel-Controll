@@ -6,6 +6,7 @@ const motoristasRoutes = require('./routes/motoristas');
 const combustiveisRoutes = require('./routes/combustiveis');
 const setoresRoutes = require('./routes/setores');
 const fornecedoresRoutes = require('./routes/fornecedores');
+const abastecimentoRoutes = require('./routes/abastecimento')
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -18,6 +19,7 @@ app.use('/motoristas', motoristasRoutes);
 app.use('/setores', setoresRoutes);
 app.use('/fornecedores', fornecedoresRoutes);
 app.use('/combustiveis', combustiveisRoutes);
+app.use('/abastecimento', abastecimentoRoutes);
 
 
 app.get('/', (req, res) => {

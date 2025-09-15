@@ -41,9 +41,9 @@ async function initializeMotoristaData() {
         return;
       }
       await Motorista.bulkCreate([
-        { nome: 'Wesley', setor_id: setores[1].id },
-        { nome: 'Junior', setor_id: setores[1].id },
-        { nome: 'Leandro', setor_id: setores[1].id }
+        { nome: 'WESLEY', setor_id: setores[1].id },
+        { nome: 'JUNIOR', setor_id: setores[1].id },
+        { nome: 'LEANDRO', setor_id: setores[1].id }
       ]);
       console.log('Motorista insert OK.');
     } else {
